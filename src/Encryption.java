@@ -7,6 +7,7 @@ public static void main(String[] args) {
 	EncryptionKey currentEncryption = new EncryptionKey();
 	String[] letters = currentEncryption.getAlphabet();
 	Integer[] encryptionKey = currentEncryption.getEncryptions();
+	int decryptionPasscode = currentEncryption.getDecryptionCode();
 	
 	String[] inputLetters = new String[input.length()];
 	for (int i = 0; i < input.length(); i++){
@@ -23,7 +24,6 @@ public static void main(String[] args) {
 			}
 				
 		}
-		System.out.println(currIndex);
 		encryptionInput[i] = encryptionKey[currIndex];
 	}
 	String output = "";
@@ -35,7 +35,8 @@ public static void main(String[] args) {
 			output += encryptionInput[i];
 		}
 	}
-	System.out.println(output);
+	System.out.println("Encryption = " + output);
+	System.out.println("Decryption passcode = " + decryptionPasscode);
 }
 
 }

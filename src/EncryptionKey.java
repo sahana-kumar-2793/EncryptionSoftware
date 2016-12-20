@@ -2,6 +2,7 @@
 public class EncryptionKey {
 	private String alphabet[] = new String[27];
 	private Integer encryptions[] = new Integer[27];
+	private int decryptionCode;
 	public EncryptionKey() {
 		alphabet[0] = "Aa";
 		alphabet[1] = "Bb";
@@ -40,6 +41,8 @@ public class EncryptionKey {
 				}
 			}
 		}
+		
+		decryptionCode = (int) Math.abs(Math.random()*1270);
 	}
 	
 	public Integer[] getEncryptions() {
@@ -47,6 +50,9 @@ public class EncryptionKey {
 	}
 	public String[] getAlphabet(){
 		return alphabet;
+	}
+	public int getDecryptionCode(){
+		return decryptionCode;
 	}
 }
 	
