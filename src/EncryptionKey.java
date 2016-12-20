@@ -31,9 +31,12 @@ public class EncryptionKey {
 		alphabet[24] = "Yy";
 		alphabet[25] = "Zz";
 		alphabet[26] = " ";
-		int encryptionKey = (int)Math.abs(Math.random()*150);
+		
+		decryptionCode = (int) Math.abs(Math.random()*1270);
+		
+		int encryptionKey = decryptionCode;
 		for (int i = 0; i < 27; i++){
-			encryptionKey = (int)Math.abs(encryptionKey+(Math.random()*100));
+			encryptionKey = (int)Math.abs(((((encryptionKey+5)*1275)/1170)-65)+92);
 			encryptions[i] = encryptionKey;
 			for (int k = 0; k<i; k++){
 				if (encryptionKey == encryptions[k]){
@@ -42,7 +45,6 @@ public class EncryptionKey {
 			}
 		}
 		
-		decryptionCode = (int) Math.abs(Math.random()*1270);
 	}
 	
 	public Integer[] getEncryptions() {
@@ -53,6 +55,37 @@ public class EncryptionKey {
 	}
 	public int getDecryptionCode(){
 		return decryptionCode;
+	}
+	public String[] getLowercaseLetters(){
+		String[] lowercase = new String[27];
+		lowercase[0] = "a";
+		lowercase[1] = "b";
+		lowercase[2] = "c";
+		lowercase[3] = "d";
+		lowercase[4] = "e";
+		lowercase[5] = "f";
+		lowercase[6] = "g";
+		lowercase[7] = "h";
+		lowercase[8] = "i";
+		lowercase[9] = "j";
+		lowercase[10] = "k";
+		lowercase[11] = "l";
+		lowercase[12] = "m";
+		lowercase[13] = "n";
+		lowercase[14] = "o";
+		lowercase[15] = "p";
+		lowercase[16] = "q";
+		lowercase[17] = "r";
+		lowercase[18] = "s";
+		lowercase[19] = "t";
+		lowercase[20] = "u";
+		lowercase[21] = "v";
+		lowercase[22] = "w";
+		lowercase[23] = "x";
+		lowercase[24] = "y";
+		lowercase[25] = "z";
+		lowercase[26] = " ";
+		return lowercase;
 	}
 }
 	
