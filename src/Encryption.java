@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
 import javax.swing.JOptionPane;
 
 public class Encryption {
@@ -37,6 +40,22 @@ public static void main(String[] args) {
 	}
 	System.out.println("Encryption = " + output);
 	System.out.println("Decryption passcode = " + decryptionPasscode);
+	
+	String encryptorForDecryptor = "";
+	for (int i = 0; i < 27; i++){
+		if (i < 26){
+			encryptorForDecryptor += encryptionKey[i] + ",";
+		}
+		if (i == 26){
+			encryptorForDecryptor += encryptionKey[i];
+		}
+	}
+	try (PrintStream out = new PrintStream(new FileOutputStream(output + "-" + decryptionPasscode + "-" + output + ".txt"))) {
+	    out.print(encryptorForDecryptor);
+	}
+	catch (Exception e) {
+		System.out.println("error");
+	}
 }
 
 }
