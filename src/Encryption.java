@@ -39,7 +39,6 @@ public static void main(String[] args) {
 		}
 	}
 	System.out.println("Encryption = " + output);
-	System.out.println("Decryption passcode = " + decryptionPasscode);
 	
 	
 }

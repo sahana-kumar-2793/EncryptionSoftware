@@ -32,7 +32,7 @@ public class EncryptionKey {
 		alphabet[25] = "Zz";
 		alphabet[26] = " ";
 		
-		decryptionCode = (int) Math.abs(Math.random()*1270);
+		decryptionCode = 1273;
 		
 		int encryptionKey = decryptionCode;
 		for (int i = 0; i < 27; i++){
