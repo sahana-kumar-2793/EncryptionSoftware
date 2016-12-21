@@ -8,7 +8,9 @@ public class Encryption {
 	
 public static void main(String[] args) {
 	String input = JOptionPane.showInputDialog(null, "Input the String you wish to encrypt."); 
-	EncryptionKey currentEncryption = new EncryptionKey();
+	String codeString = JOptionPane.showInputDialog(null, "Input the desired Decryption Code.");
+	int codeInteger = Integer.parseInt(codeString);
+	EncryptionKey currentEncryption = new EncryptionKey(codeInteger);
 	String[] letters = currentEncryption.getAlphabet();
 	Integer[] encryptionKey = currentEncryption.getEncryptions();
 	int decryptionPasscode = currentEncryption.getDecryptionCode();

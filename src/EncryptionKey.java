@@ -3,7 +3,7 @@ public class EncryptionKey {
 	private String alphabet[] = new String[27];
 	private Integer encryptions[] = new Integer[27];
 	private int decryptionCode;
-	public EncryptionKey() {
+	public EncryptionKey(int code) {
 		alphabet[0] = "Aa";
 		alphabet[1] = "Bb";
 		alphabet[2] = "Cc";
@@ -32,7 +32,7 @@ public class EncryptionKey {
 		alphabet[25] = "Zz";
 		alphabet[26] = " ";
 		
-		decryptionCode = 1273;
+		decryptionCode = code;
 		
 		int encryptionKey = decryptionCode;
 		for (int i = 0; i < 27; i++){
