@@ -37,5 +37,6 @@ public static void main(String[] args) {
 		decrypted += encryptedMessage[i];
 	}
 	System.out.println("Message: " + decrypted);
+	JOptionPane.showMessageDialog(null, "Decrypted Message: " + decrypted);
 }
 }

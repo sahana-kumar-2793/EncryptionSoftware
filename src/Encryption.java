@@ -1,6 +1,7 @@
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Encryption {
@@ -39,6 +40,8 @@ public static void main(String[] args) {
 		}
 	}
 	System.out.println("Encryption = " + output);
+	JOptionPane.showMessageDialog(null, "Encryption: " + output);
+	
 	
 	
 }
