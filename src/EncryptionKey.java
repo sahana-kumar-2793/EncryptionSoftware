@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Sahana Kumar
+ *
+ */
 public class EncryptionKey {
 	private String alphabet[] = new String[27];
 	private Integer encryptions[] = new Integer[27];

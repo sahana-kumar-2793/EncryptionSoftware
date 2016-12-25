@@ -1,3 +1,7 @@
+/**
+ * @author Sahana Kumar
+ */
+
 import javax.swing.JOptionPane;
 
 public class Decryption {
@@ -29,6 +33,10 @@ public static void main(String[] args) {
 				currIndex = k;
 				break;
 			}
+		}
+		if (currIndex == -1){
+			JOptionPane.showMessageDialog(null, "Invalid Decryption code. Please try again.");
+			break;
 		}
 		encryptedMessage[i] = letters[currIndex];
 	}
